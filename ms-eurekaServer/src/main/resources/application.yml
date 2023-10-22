@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: ms-eureka
+
+
+server:
+  port: 8761
+  
+
+eureka:
+  client:
+    #NAO SE AUTO REGISTRE 
+    register-with-eureka: false
+    #NAO BUSQUE PELO REGISTRO DOS MS RESPONSABILIDADE => GATEWAY
+    fetch-registry: false
+  
+  
