@@ -1,1 +1,17 @@
-
+spring:
+  application:
+    name: ms-cliente
+    
+server:
+  port: 0
+ 
+#EM QUAL SERVIDOR EUREKA EU VOU ME REGISTRAR -> http://http://localhost:8761/eureka (PASSO O PATH)
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+#QUAL O ID DESSA INSTANCIA LA DENTRO DO MEU EUREKA (ID RANDOMICO)     
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance-id:${random.value}}
+  
+    
