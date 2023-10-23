@@ -17,7 +17,7 @@ public class MsGatewayApplication {
 		SpringApplication.run(MsGatewayApplication.class, args);
 	}
 	
-	//
+	//->REGISTRANDO OS MS NO GATEWAY PARA SER FEITO O LOUDBALANCE
 	@Bean
 	public RouteLocator routes(RouteLocatorBuilder builder){
 		return  builder

@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import io.hbdev.mscliente.application.representation.ClienteSaveRequest;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/api/clientes")
+@Slf4j
 public class ClienteController {
 	
 	@Autowired
@@ -25,6 +27,7 @@ public class ClienteController {
 	
 	 @GetMapping
 	    public String status(){
+		 log.info("Obtendo status do microservice de cliente");
 	        return "Vikas Wrestler";
 	    }
 	 	
