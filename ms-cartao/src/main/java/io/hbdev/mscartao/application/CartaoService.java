@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import io.hbdev.mscartao.domain.Cartao;
+import io.hbdev.mscartao.domain.ClienteCartao;
 import io.hbdev.mscartao.infra.respository.CartaoRepository;
 
 @Service
@@ -28,4 +29,6 @@ public class CartaoService {
 			var rendaBigDecimal = BigDecimal.valueOf(renda);
 			return repository.findByRendaLessThanEqual(rendaBigDecimal);
 		}
+
+		
 }
